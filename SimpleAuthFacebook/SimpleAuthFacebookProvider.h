@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 SimpleAuth. All rights reserved.
 //
 
-#import "SimpleAuthSystemProvider.h"
+#import <SimpleAuth/SimpleAuthSystemProvider.h>
 
 @interface SimpleAuthFacebookProvider : SimpleAuthSystemProvider
 
