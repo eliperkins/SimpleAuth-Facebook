@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   
   s.dependency 'cocoa-oauth'
   s.dependency 'SAMCategories'
-  s.dependency 'SimpleAuth'
+  s.dependency 'SimpleAuth/Provider'
   
   s.platform = :ios, '6.0'
 end
