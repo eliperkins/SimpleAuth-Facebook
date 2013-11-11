@@ -67,7 +67,11 @@
 - (void)authorizeWithSystemAccount:(ACAccount *)account completion:(SimpleAuthRequestHandler)completion {
     [self facebookAccountWithSystemAccount:account completion:^(id responseObject, NSHTTPURLResponse *response, NSError *error) {
         if (responseObject) {
-            completion(responseObject, response, error);
+            // Grab the access token from the ACAccount and add it to our response
+            NSMutableDictionary *mutableResponse = [responseObject mutableCopy];
+            [mutableResponse setObject:[account credential].oauthToken forKey:@"access_token"];
+            
+            completion([NSDictionary dictionaryWithDictionary:mutableResponse], response, error);
         }
         else {
             // Handle error
