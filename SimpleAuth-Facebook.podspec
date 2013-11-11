@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'SimpleAuthFacebook'
+  s.name         = 'SimpleAuth-Facebook'
   s.version      = '0.1.0'
   s.summary      = 'Facebook provider for SimpleAuth.'
   s.homepage     = 'https://github.com/SimpleAuth/SimpleAuth'
